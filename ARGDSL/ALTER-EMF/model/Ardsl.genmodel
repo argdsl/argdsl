@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ALTER-EMF/src" modelPluginID="ALTER-EMF" modelName="Ardsl"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>Ardsl.ecore</foreignModel>
+  <genPackages prefix="Ardsl" disposableProviderFactory="true" ecorePackage="Ardsl.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Ardsl.ecore#//Planes">
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//Planes/any"/>
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//Planes/horizontal"/>
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//Planes/vertical"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Ardsl.ecore#//BodyType">
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//BodyType/static"/>
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//BodyType/dynamic"/>
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//BodyType/kinematic"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Ardsl.ecore#//Gesture">
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//Gesture/touch"/>
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//Gesture/drag"/>
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//Gesture/tilt"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Ardsl.ecore#//BasicActions">
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//BasicActions/none"/>
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//BasicActions/win"/>
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//BasicActions/lose"/>
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//BasicActions/start"/>
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//BasicActions/restart"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Ardsl.ecore#//Action">
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//Action/create"/>
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//Action/edit"/>
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//Action/delete"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Ardsl.ecore#//Position">
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//Position/front"/>
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//Position/default"/>
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//Position/back"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Ardsl.ecore#//LogicOps">
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//LogicOps/Or"/>
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//LogicOps/And"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Ardsl.ecore#//ArithmOps">
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//ArithmOps/equal"/>
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//ArithmOps/greater"/>
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//ArithmOps/greaterEqual"/>
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//ArithmOps/lower"/>
+      <genEnumLiterals ecoreEnumLiteral="Ardsl.ecore#//ArithmOps/lowerEqual"/>
+    </genEnums>
+    <genClasses ecoreClass="Ardsl.ecore#//Ontological">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Ontological/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardsl.ecore#//Ontological/classes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardsl.ecore#//Ontological/graphic"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardsl.ecore#//Ontological/physic"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardsl.ecore#//Ontological/game"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardsl.ecore#//Graphic">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardsl.ecore#//Graphic/classes"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardsl.ecore#//Physic">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardsl.ecore#//Physic/classes"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardsl.ecore#//Game">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Game/win"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Game/lose"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Game/start"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardsl.ecore#//Game/gamepad"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardsl.ecore#//Game/score"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardsl.ecore#//Game/actionsTriggers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardsl.ecore#//Game/collisions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardsl.ecore#//Game/objInit"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardsl.ecore#//GamePad">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//GamePad/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardsl.ecore#//GamePad/trigger"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardsl.ecore#//Class">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Class/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Class/abstract"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Class/noSCN"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardsl.ecore#//Class/superclass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardsl.ecore#//Class/attributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardsl.ecore#//Class/references"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardsl.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Attribute/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Attribute/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Attribute/min"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Attribute/max"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Attribute/default"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Attribute/isParam"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Attribute/isKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Attribute/readOnly"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardsl.ecore#//Reference">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Reference/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Reference/containtment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Reference/min"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Reference/max"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Reference/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Reference/opposite"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardsl.ecore#//GraphicClass">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardsl.ecore#//GraphicClass/constraints"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardsl.ecore#//GraphicClass/connections"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardsl.ecore#//GraphicClass/ontoClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardsl.ecore#//GraphicClass/versions"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardsl.ecore#//Versions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Versions/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Versions/URL"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardsl.ecore#//Constraints">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Constraints/planes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Constraints/ilumination"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Constraints/sizeMin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Constraints/sizeMax"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Constraints/sizeInit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Constraints/overlapping"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Constraints/xToOriginPos"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Constraints/yToOriginPos"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Constraints/zToOriginPos"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Constraints/rotation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Constraints/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Constraints/textColor"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardsl.ecore#//Connection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Connection/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Connection/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Connection/color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Connection/textColor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Connection/decorator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Connection/decoratorPos"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Connection/pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Connection/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Connection/position"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardsl.ecore#//PhysicClass">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardsl.ecore#//PhysicClass/physicBody"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardsl.ecore#//PhysicClass/bitMasks"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardsl.ecore#//PhysicClass/ontoClass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardsl.ecore#//PhysicClass/forces"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardsl.ecore#//PhysicBody">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//PhysicBody/mass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//PhysicBody/bodyType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//PhysicBody/charge"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//PhysicBody/friction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//PhysicBody/rollingFriction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//PhysicBody/restitution"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//PhysicBody/damping"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//PhysicBody/angularDamping"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardsl.ecore#//BitMasks">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardsl.ecore#//BitMasks/collision"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardsl.ecore#//BitMasks/contact"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardsl.ecore#//Force">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Force/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Force/gesture"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Force/xVector"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Force/yVector"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Force/zVector"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardsl.ecore#//ScoreSystem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//ScoreSystem/start"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//ScoreSystem/finish"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//ScoreSystem/lives"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardsl.ecore#//Trigger">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Trigger/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Trigger/message"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Trigger/timeTrigger"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Trigger/scoreChange"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardsl.ecore#//Trigger/physicChanges"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Trigger/action"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardsl.ecore#//PhysicChange">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//PhysicChange/object"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//PhysicChange/action"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardsl.ecore#//PhysicChange/class"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardsl.ecore#//PhysicChange/force"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//PhysicChange/position"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//PhysicChange/attribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//PhysicChange/scale"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//PhysicChange/changeValue"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardsl.ecore#//Collision">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardsl.ecore#//Collision/classA"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardsl.ecore#//Collision/classB"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardsl.ecore#//Collision/action"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardsl.ecore#//ObjInit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//ObjInit/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//ObjInit/posX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//ObjInit/posY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//ObjInit/posZ"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardsl.ecore#//ObjInit/class"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardsl.ecore#//ObjInit/attribute"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardsl.ecore#//ObjInit/rules"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//ObjInit/rotation"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardsl.ecore#//ObjAttribute">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardsl.ecore#//ObjAttribute/attribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//ObjAttribute/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardsl.ecore#//Rule">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardsl.ecore#//Rule/action"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardsl.ecore#//Rule/condition"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Ardsl.ecore#//Condition"/>
+    <genClasses image="false" ecoreClass="Ardsl.ecore#//LogicOp">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardsl.ecore#//LogicOp/left"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardsl.ecore#//Not"/>
+    <genClasses ecoreClass="Ardsl.ecore#//Binary">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardsl.ecore#//Binary/right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Binary/op"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Ardsl.ecore#//Arithmetic">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//Arithmetic/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardsl.ecore#//Arithmetic/right"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardsl.ecore#//Arithmetic/left"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Ardsl.ecore#//Value"/>
+    <genClasses ecoreClass="Ardsl.ecore#//AttributeValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//AttributeValue/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//AttributeValue/attribute"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardsl.ecore#//ConstantValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//ConstantValue/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardsl.ecore#//AllInstances">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardsl.ecore#//AllInstances/type"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

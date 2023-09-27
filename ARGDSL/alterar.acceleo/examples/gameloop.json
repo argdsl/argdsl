@@ -1,0 +1,132 @@
+{
+	"name": "skeet",
+	"game": [{
+		"win": "HIT",
+		"lose": "MISS",
+		"start": "START",
+		"objInit": [{
+			"name": "player",
+			"class": "player",
+			"posX": "0.0",
+			"posY": "0.0",
+			"posZ": "0.0",
+			"attributes": [],
+			"rule": [{
+				"condition":{
+					"left":{
+						"left":"ammo",
+						"right":"0",
+						"operation":"equal"
+						
+					},
+					"right":{
+						"left":"AllInstances(target)",
+						"right":"0",
+						"operation":"greater"
+						
+					},
+					"operation":"And"
+					
+				},
+				"action":"gameover"
+			}]
+		}{
+			"name": "target",
+			"class": "target",
+			"posX": "0.0",
+			"posY": "0.3",
+			"posZ": "0.2",
+			"attributes": [],
+			"rule": []
+		}{
+			"name": "target1",
+			"class": "target",
+			"posX": "0.2",
+			"posY": "0.2",
+			"posZ": "-0.3",
+			"attributes": [],
+			"rule": []
+		}{
+			"name": "target2",
+			"class": "target",
+			"posX": "-0.5",
+			"posY": "0.4",
+			"posZ": "1.0",
+			"attributes": [],
+			"rule": []
+		}{
+			"name": "target3",
+			"class": "target",
+			"posX": "-0.6",
+			"posY": "0.2",
+			"posZ": "-0.4",
+			"attributes": [],
+			"rule": []
+		}{
+			"name": "target4",
+			"class": "target",
+			"posX": "-1.0",
+			"posY": "0.3",
+			"posZ": "-0.3",
+			"attributes": [],
+			"rule": []
+		}{
+			"name": "target5",
+			"class": "target",
+			"posX": "0.0",
+			"posY": "0.4",
+			"posZ": "-0.5",
+			"attributes": [],
+			"rule": []
+		}],
+		"name": "skeet",
+		"actionsTriggers":[		
+		{
+			"name":"shoot",
+			"action":"none",
+			"sceneChanges"[			
+			{
+ 				"name": "bullet",
+				"class": "bullet",
+				"action": "create",
+				"changeValue":0,
+				"scale":0.0,
+				"position":"front" 			
+			},			
+			{
+ 				"name": "player",
+				"class": "player",
+				"action": "edit",
+				"changeValue":-1,
+				"scale":0.0,
+				"attribute":"ammo",
+				"position":"front" 			
+			}] 
+		},		
+		{
+			"name":"gameover",
+			"action":"lose",
+			"sceneChanges"[] 
+		},		
+		{
+			"name":"hit",
+			"scoreChange":"1",
+			"action":"none",
+			"sceneChanges"[] 
+		}],
+		"collisions": [{
+			"classA": "bullet",
+			"classB": "target",
+			"action": "hit"
+		}		],
+		"scoreSystem": {
+			"start":0,
+			"finish":-1,
+			"lives":3
+		},
+		"gamePad":[{
+			"name":"shoot",
+			"trigger":"shoot"
+		}]
+	}] 
+}

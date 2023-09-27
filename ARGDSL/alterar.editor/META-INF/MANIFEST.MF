@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: alterar.editor
+Bundle-ManifestVersion: 2
+Bundle-Name: alterar.editor
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: alterar.editor; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: ALTER-EMF,
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: arg.services,
+ arg.parser.antlr.internal,
+ arg.serializer,
+ arg,
+ arg.formatting2,
+ arg.validation,
+ arg.generator,
+ arg.parser.antlr,
+ arg.scoping
+Import-Package: org.apache.log4j

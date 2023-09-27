@@ -1,0 +1,17 @@
+<plugin>
+ <extension point="org.eclipse.ui.handlers">
+ <handler class="alterar.plugin.AlterarPlugin" commandId="arg.command">
+ </handler>
+ </extension>
+ <extension point="org.eclipse.ui.menus">
+ <menuContribution allPopups="true" locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+ <command commandId="arg.command" label="Generate code">
+ <visibleWhen checkEnabled="false">
+ <iterate>
+ <test property="org.eclipse.core.resources.extension" value="arg" />
+ </iterate>
+ </visibleWhen>
+ </command>
+ </menuContribution>
+ </extension>
+</plugin>
