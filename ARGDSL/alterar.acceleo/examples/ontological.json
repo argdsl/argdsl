@@ -1,0 +1,41 @@
+{
+	"bluetooth": false,
+	"classes": [
+	{
+		"name": "bullet",
+		"abstract": "false",
+		"parents": [],
+		"attributes": [],
+		"reference": []	
+	},
+	{
+		"name": "target",
+		"abstract": "false",
+		"parents": [],
+		"attributes": [],
+		"reference": []	
+	},
+	{
+		"name": "player",
+		"abstract": "false",
+		"parents": [],
+		"attributes": [{
+			"name": "ammo",
+			"type": "Int",
+			"min": "1",
+			"max": "1",
+			"default": "6",
+			"isParam": false,
+			"readOnly": false
+		}],
+		"reference": [],
+		"noSCN": true	
+	}	
+	],
+	"external": false,
+	"firebase": false,
+	"gameloop": true,
+	"name": "skeet",
+	"onlyCodes": false,
+	"physics": true
+}
