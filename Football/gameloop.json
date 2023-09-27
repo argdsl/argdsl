@@ -1,0 +1,124 @@
+{
+	"name": "football",
+	"game": [{
+		"win": "TIMEOVER",
+		"lose": "TIMEOVER",
+		"start": "START",
+		"objInit": [{
+			"name": "balon",
+			"class": "ball",
+			"posX": "0.0",
+			"posY": "1.0",
+			"posZ": "1.0",			"attributes": [],
+			"rules": []
+		},{
+			"name": "porteria",
+			"class": "net",
+			"posX": "0.0",
+			"posY": "0.0",
+			"posZ": "10.0",			"attributes": [],
+			"rules": []
+		},{
+			"name": "suelo",
+			"class": "floor",
+			"posX": "0.0",
+			"posY": "0.0",
+			"posZ": "0.0",			"attributes": [],
+			"rules": []
+		},{
+			"name": "poste1",
+			"class": "obstacle",
+			"posX": "5.0",
+			"posY": "0.0",
+			"posZ": "10.0",			"attributes": [],
+			"rules": []
+		},{
+			"name": "poste2",
+			"class": "obstacle",
+			"posX": "-5.0",
+			"posY": "0.0",
+			"posZ": "10.0",			"attributes": [],
+			"rules": []
+		},{
+			"name": "limite",
+			"class": "obstacle",
+			"posX": "0.0",
+			"posY": "0.0",
+			"posZ": "12.0",			"attributes": [],
+			"rules": []
+		},{
+			"name": "barrera",
+			"class": "obstacle",
+			"posX": "0.0",
+			"posY": "0.0",
+			"posZ": "5.0",			"attributes": [],
+			"rules": []
+		}],
+		"name": "football",
+		"actionsTriggers":[		
+		{
+			"name":"gameover",
+			"timeTrigger":"60",
+			"action":"win",
+			"sceneChanges":[] 
+		},		
+		{
+			"name":"gol",
+			"scoreChange":"1",
+			"action":"none",
+			"sceneChanges":[			
+			{
+ 				"name": "balon",
+				"class": "ball",
+				"action": "delete",
+				"changeValue":0,
+				"scale":0.0,
+				"position":"front" 			
+			},			
+			{
+ 				"name": "balon",
+				"class": "ball",
+				"action": "create",
+				"changeValue":0,
+				"scale":0.0,
+				"position":"front" 			
+			}] 
+		},		
+		{
+			"name":"miss",
+			"action":"none",
+			"sceneChanges":[			
+			{
+ 				"name": "balon",
+				"class": "ball",
+				"action": "delete",
+				"changeValue":0,
+				"scale":0.0,
+				"position":"front" 			
+			},			
+			{
+ 				"name": "balon",
+				"class": "ball",
+				"action": "create",
+				"changeValue":0,
+				"scale":0.0,
+				"position":"front" 			
+			}] 
+		}],
+		"collisions": [{
+			"classA": "ball",
+			"classB": "net",
+			"action": "gol"
+		},{
+			"classA": "ball",
+			"classB": "obstacle",
+			"action": "miss"
+		}		],
+		"scoreSystem": {
+			"start":0,
+			"finish":-1,
+			"lives":1
+		},
+		"gamePad":[]
+	}] 
+}

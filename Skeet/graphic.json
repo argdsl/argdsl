@@ -1,0 +1,58 @@
+{
+	"name": "skeet",
+	"classes": [	
+	{
+		"name": "bullet",
+		"versions": {
+			"v1": "xxxV1"
+,			"v2": "xxxV2"
+		},
+		"vname": {
+			"v1": "v1"
+,			"v2": "v2"
+		},
+		"showAttributes":[],
+		"constraints":{
+			"planes":"any",
+			"ilumination":"",
+			"sizeMin":"0.5",
+			"sizeMax":"1.0",
+			"sizeInit":"0.0",
+			"overlapping":"true",
+			"xToOriginPos":"0.0",
+			"yToOriginPos":"0.0",
+			"zToOriginPos":"0.0",
+			"rotation":"0",
+			"text":"none"
+		},
+		"connections":{
+			"bullets": []
+		}
+	},	
+	{
+		"name": ""target"",
+		"versions": {
+			"v1": "xxxV1"
+		},
+		"vname": {
+			"v1": "v1"
+		},
+		"showAttributes":[],
+		"constraints":{
+			"planes":"any",
+			"ilumination":"",
+			"sizeMin":"0.5",
+			"sizeMax":"1.0",
+			"sizeInit":"0.0",
+			"overlapping":"true",
+			"xToOriginPos":"0.0",
+			"yToOriginPos":"0.0",
+			"zToOriginPos":"0.0",
+			"rotation":"0",
+			"text":"none"
+		},
+		"connections":{
+			""target"s": []
+		}
+	}] 
+}
