@@ -1,0 +1,39 @@
+{
+	"bluetooth": false,
+	"classes": [
+	{
+		"name": "Ball",
+		"abstract": "false",
+		"parents": [],
+		"attributes": [],
+		"reference": []	
+	},
+	{
+		"name": "wall",
+		"abstract": "false",
+		"parents": [],
+		"attributes": [],
+		"reference": []	
+	},
+	{
+		"name": "finish",
+		"abstract": "false",
+		"parents": [],
+		"attributes": [],
+		"reference": []	
+	},
+	{
+		"name": "Plane",
+		"abstract": "false",
+		"parents": [],
+		"attributes": [],
+		"reference": []	
+	}	
+	],
+	"external": false,
+	"firebase": false,
+	"gameloop": true,
+	"name": "Labirinth",
+	"onlyCodes": false,
+	"physics": true
+}

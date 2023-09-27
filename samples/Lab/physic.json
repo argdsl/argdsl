@@ -1,0 +1,112 @@
+{
+	"name": "Labirinth",
+	"classes": [	
+	{
+		"name": "wall",
+		"physicBody":{
+			"bodyType": "static",
+			"mass": 0.0,
+			"charge": 0.0,
+			"friction": 0.0,
+			"rollingFriction": 0.0,
+			"damping": 0.0,
+			"angularDamping": 0.0,
+			"restitution": 0.0
+		},
+		"bitMasks":{
+			"category": 1,
+			"collision": 8,
+			"contactTest": 8
+		},
+		"forces":[]
+	},	
+	{
+		"name": "finish",
+		"physicBody":{
+			"bodyType": "static",
+			"mass": 0.0,
+			"charge": 0.0,
+			"friction": 0.0,
+			"rollingFriction": 0.0,
+			"damping": 0.0,
+			"angularDamping": 0.0,
+			"restitution": 0.0
+		},
+		"bitMasks":{
+			"category": 2,
+			"collision": 8,
+			"contactTest": 8
+		},
+		"forces":[]
+	},	
+	{
+		"name": "Plane",
+		"physicBody":{
+			"bodyType": "static",
+			"mass": 0.0,
+			"charge": 0.0,
+			"friction": 1.0,
+			"rollingFriction": 1.0,
+			"damping": 0.0,
+			"angularDamping": 0.0,
+			"restitution": 0.0
+		},
+		"bitMasks":{
+			"category": 4,
+			"collision": 8,
+			"contactTest": 8
+		},
+		"forces":[]
+	},	
+	{
+		"name": "Ball",
+		"physicBody":{
+			"bodyType": "dynamic",
+			"mass": 0.6,
+			"charge": 0.0,
+			"friction": 1.0,
+			"rollingFriction": 1.0,
+			"damping": 0.1,
+			"angularDamping": 0.1,
+			"restitution": 0.0
+		},
+		"bitMasks":{
+			"category": 8,
+			"collision": 7,
+			"contactTest": 7
+		},
+		"forces":[		
+		{
+			"name":"up",
+			"message":"",
+			"gesture":"touch",
+			"xVector":1.0,
+			"yVector":0.0,
+			"zVector":-1.0
+		},		
+		{
+			"name":"down",
+			"message":"",
+			"gesture":"touch",
+			"xVector":-1.0,
+			"yVector":0.0,
+			"zVector":1.0
+		},		
+		{
+			"name":"left",
+			"message":"",
+			"gesture":"touch",
+			"xVector":-1.0,
+			"yVector":0.0,
+			"zVector":-1.0
+		},		
+		{
+			"name":"right",
+			"message":"",
+			"gesture":"touch",
+			"xVector":1.0,
+			"yVector":0.0,
+			"zVector":1.0
+		}]
+	}]
+}

@@ -1,0 +1,82 @@
+{
+	"name": "playground",
+	"classes": [	
+	{
+		"name": "Ball",
+		"versions": {
+			"v1": "https://github.com/Albertojuanse/miso_ar_test/blob/master/Ikea/Ikea/Models.scnassets/Ball.scn?raw=true"
+		},
+		"vname": {
+			"v1": "ball"
+		},
+		"showAttributes":[],
+		"constraints":{
+			"planes":"any",
+			"ilumination":"",
+			"sizeMin":"0.1",
+			"sizeMax":"1.0",
+			"sizeInit":"0.0",
+			"overlapping":"true",
+			"xToOriginPos":"0.0",
+			"yToOriginPos":"0.0",
+			"zToOriginPos":"0.0",
+			"rotation":"0",
+			"text":"none"
+		},
+		"connections":{
+			"Balls": []
+		}
+	},	
+	{
+		"name": "Floor",
+		"versions": {
+			"v1": "https://github.com/Albertojuanse/miso_ar_test/blob/master/Ikea/Ikea/Models.scnassets/Floor.scn?raw=true"
+		},
+		"vname": {
+			"v1": "floor"
+		},
+		"showAttributes":[],
+		"constraints":{
+			"planes":"horizontal",
+			"ilumination":"",
+			"sizeMin":"1.0",
+			"sizeMax":"1.0",
+			"sizeInit":"0.0",
+			"overlapping":"true",
+			"xToOriginPos":"0.0",
+			"yToOriginPos":"0.0",
+			"zToOriginPos":"0.0",
+			"rotation":"0",
+			"text":"none"
+		},
+		"connections":{
+			"Floors": []
+		}
+	},	
+	{
+		"name": "Box",
+		"versions": {
+			"v1": "https://github.com/Albertojuanse/miso_ar_test/blob/master/Ikea/Ikea/Models.scnassets/Box.scn?raw=true"
+		},
+		"vname": {
+			"v1": "floor"
+		},
+		"showAttributes":[],
+		"constraints":{
+			"planes":"horizontal",
+			"ilumination":"",
+			"sizeMin":"1.0",
+			"sizeMax":"1.0",
+			"sizeInit":"0.0",
+			"overlapping":"true",
+			"xToOriginPos":"0.0",
+			"yToOriginPos":"0.0",
+			"zToOriginPos":"0.0",
+			"rotation":"0",
+			"text":"none"
+		},
+		"connections":{
+			"Boxs": []
+		}
+	}] 
+}

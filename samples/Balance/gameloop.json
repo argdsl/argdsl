@@ -1,0 +1,74 @@
+{
+	"name": "playground",
+	"game": [{
+		"win": """",
+		"lose": ""YOU LOST"",
+		"start": ""START"",
+		"objInit": [{
+			"name": "pad",
+			"class": "Floor",
+			"posX": "0.0",
+			"posY": "-2.0",
+			"posZ": "-0.2",
+			"attributes": [],
+			"rule": []
+		},{
+			"name": "penaltyBox",
+			"class": "Box",
+			"posX": "-0.3",
+			"posY": "-1.9",
+			"posZ": "-0.6",
+			"attributes": [],
+			"rule": []
+		},{
+			"name": "ball",
+			"class": "Ball",
+			"posX": "0.0",
+			"posY": "-1.0",
+			"posZ": "-0.2",
+			"attributes": [],
+			"rule": []
+		}],
+		"name": "playground",
+		"actionsTriggers":[		
+		{
+			"name":"levelUp",
+			"message":""LEVEL UP"",
+			"timeTrigger":"10",
+			"action":"none",
+			"sceneChanges":[			
+			{
+ 				"name": "pad",
+				"class": "Floor",
+				"action": "edit",
+				"changeValue":0,
+				"scale":-0.1,
+				"position":"front" 			
+			}] 
+		},		
+		{
+			"name":"pointUp",
+			"timeTrigger":"1",
+			"scoreChange":"1",
+			"action":"none",
+			"sceneChanges":[] 
+		},		
+		{
+			"name":"penalty",
+			"scoreChange":"-10",
+			"action":"none",
+			"sceneChanges":[] 
+		}],
+		"collisions": [{
+			"classA": "Ball",
+			"classB": "Box",
+			"action": "penalty"
+		}		],
+		"scoreSystem": {
+			"start":0,
+			"finish":-1,
+			"lives":0
+		},
+		"gamePad":[]
+	}] 
+}

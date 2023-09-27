@@ -1,0 +1,200 @@
+{
+	"name": "Labirinth",
+	"game": [{
+		"win": "scaped",
+		"lose": "lost",
+		"start": "go",
+		"objInit": [{
+			"name": "finish",
+			"class": "finish",
+			"posX": "-2.0",
+			"posY": "-5.0",
+			"posZ": "-7.0",			"attributes": [],
+			"rules": []
+		},{
+			"name": "wallO",
+			"class": "wall",
+			"posX": "-1.0",
+			"posY": "-5.0",
+			"posZ": "-6.0",			"attributes": [],
+			"rules": []
+		},{
+			"name": "wallE",
+			"class": "wall",
+			"posX": "2.0",
+			"posY": "-5.0",
+			"posZ": "-2.0",			"attributes": [],
+			"rules": []
+		},{
+			"name": "wallN",
+			"class": "wall",
+			"posX": "1.0",
+			"posY": "-6.0",
+			"posZ": "-5.0",			"attributes": [],
+			"rules": []
+		},{
+			"name": "wallNO",
+			"class": "wall",
+			"posX": "-2.0",
+			"posY": "-5.0",
+			"posZ": "-4.0",			"attributes": [],
+			"rules": []
+		},{
+			"name": "floor",
+			"class": "Plane",
+			"posX": "0.0",
+			"posY": "-5.0",
+			"posZ": "-5.0",			"attributes": [],
+			"rules": []
+		},{
+			"name": "ball",
+			"class": "Ball",
+			"posX": "2.5",
+			"posY": "1.0",
+			"posZ": "-5.0",			"attributes": [],
+			"rules": []
+		}],
+		"name": "Labirinth",
+		"actionsTriggers":[		
+		{
+			"name":"gameover",
+			"action":"lose",
+			"sceneChanges":[] 
+		},		
+		{
+			"name":"winning",
+			"action":"win",
+			"sceneChanges":[] 
+		},		
+		{
+			"name":"up",
+			"action":"none",
+			"sceneChanges":[			
+			{
+ 				"name": "ball",
+				"class": "Ball",
+				"action": "edit",
+				"changeValue":0,
+				"scale":0.0,
+				"force":"up",
+				"position":"front" 			
+			}] 
+		},		
+		{
+			"name":"down",
+			"action":"none",
+			"sceneChanges":[			
+			{
+ 				"name": "ball",
+				"class": "Ball",
+				"action": "edit",
+				"changeValue":0,
+				"scale":0.0,
+				"force":"down",
+				"position":"front" 			
+			}] 
+		},		
+		{
+			"name":"left",
+			"action":"none",
+			"sceneChanges":[			
+			{
+ 				"name": "ball",
+				"class": "Ball",
+				"action": "edit",
+				"changeValue":0,
+				"scale":0.0,
+				"force":"left",
+				"position":"front" 			
+			}] 
+		},		
+		{
+			"name":"right",
+			"action":"none",
+			"sceneChanges":[			
+			{
+ 				"name": "ball",
+				"class": "Ball",
+				"action": "edit",
+				"changeValue":0,
+				"scale":0.0,
+				"force":"right",
+				"position":"front" 			
+			}] 
+		},		
+		{
+			"name":"levelUp",
+			"message":"LevelUP",
+			"scoreChange":"1",
+			"action":"restart",
+			"sceneChanges":[			
+			{
+ 				"name": "floor",
+				"class": "Plane",
+				"action": "edit",
+				"changeValue":0,
+				"scale":-0.1,
+				"position":"front" 			
+			},			
+			{
+ 				"name": "wallO",
+				"class": "wall",
+				"action": "edit",
+				"changeValue":0,
+				"scale":0.3,
+				"position":"front" 			
+			},			
+			{
+ 				"name": "wallE",
+				"class": "wall",
+				"action": "edit",
+				"changeValue":0,
+				"scale":0.3,
+				"position":"front" 			
+			},			
+			{
+ 				"name": "wallN",
+				"class": "wall",
+				"action": "edit",
+				"changeValue":0,
+				"scale":0.3,
+				"position":"front" 			
+			},			
+			{
+ 				"name": "wallNO",
+				"class": "wall",
+				"action": "edit",
+				"changeValue":0,
+				"scale":0.3,
+				"position":"front" 			
+			}] 
+		}],
+		"collisions": [{
+			"classA": "Ball",
+			"classB": "wall",
+			"action": "gameover"
+		},{
+			"classA": "Ball",
+			"classB": "finish",
+			"action": "levelUp"
+		}		],
+		"scoreSystem": {
+			"start":0,
+			"finish":3,
+			"lives":3
+		},
+		"gamePad":[{
+			"name":"up",
+			"trigger":"up"
+		},{
+			"name":"down",
+			"trigger":"down"
+		},{
+			"name":"left",
+			"trigger":"left"
+		},{
+			"name":"right",
+			"trigger":"right"
+		}]
+	}] 
+}

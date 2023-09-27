@@ -1,0 +1,134 @@
+{
+	"name": "Labirinth",
+	"classes": [	
+	{
+		"name": "wall",
+		"versions": {
+			"v1": "https://github.com/Albertojuanse/miso_ar_test/blob/master/Ikea/Ikea/Models.scnassets/wall.scn?raw=true"
+		},
+		"vname": {
+			"v1": "v1"
+		},
+		"showAttributes":[],
+		"constraints":{
+			"planes":"any",
+			"ilumination":"",
+			"sizeMin":"1.0",
+			"sizeMax":"1.0",
+			"sizeInit":"0.0",
+			"overlapping":"true",
+			"xToOriginPos":"0.0",
+			"yToOriginPos":"0.0",
+			"zToOriginPos":"0.0",
+			"rotation":"0",
+			"text":"none"
+		},
+		"connections":{
+			"walls": []
+		}
+	},	
+	{
+		"name": "finish",
+		"versions": {
+			"v1": "https://github.com/Albertojuanse/miso_ar_test/blob/master/Ikea/Ikea/Models.scnassets/finish.scn?raw=true"
+		},
+		"vname": {
+			"v1": "v1finish"
+		},
+		"showAttributes":[],
+		"constraints":{
+			"planes":"any",
+			"ilumination":"",
+			"sizeMin":"1.0",
+			"sizeMax":"1.0",
+			"sizeInit":"0.0",
+			"overlapping":"true",
+			"xToOriginPos":"0.0",
+			"yToOriginPos":"0.0",
+			"zToOriginPos":"0.0",
+			"rotation":"0",
+			"text":"none"
+		},
+		"connections":{
+			"finishs": []
+		}
+	},	
+	{
+		"name": "Ball",
+		"versions": {
+			"v1": "https://github.com/Albertojuanse/miso_ar_test/blob/master/Ikea/Ikea/Models.scnassets/Ball.scn?raw=true"
+		},
+		"vname": {
+			"v1": "v1ball"
+		},
+		"showAttributes":[],
+		"constraints":{
+			"planes":"any",
+			"ilumination":"",
+			"sizeMin":"1.0",
+			"sizeMax":"2.0",
+			"sizeInit":"0.0",
+			"overlapping":"true",
+			"xToOriginPos":"0.0",
+			"yToOriginPos":"0.0",
+			"zToOriginPos":"0.0",
+			"rotation":"0",
+			"text":"none"
+		},
+		"connections":{
+			"Balls": []
+		}
+	},	
+	{
+		"name": "finish",
+		"versions": {
+			"v1": "https://github.com/Albertojuanse/miso_ar_test/blob/master/Ikea/Ikea/Models.scnassets/finish.scn?raw=true"
+		},
+		"vname": {
+			"v1": "v1finish"
+		},
+		"showAttributes":[],
+		"constraints":{
+			"planes":"any",
+			"ilumination":"",
+			"sizeMin":"1.0",
+			"sizeMax":"1.0",
+			"sizeInit":"0.0",
+			"overlapping":"true",
+			"xToOriginPos":"0.0",
+			"yToOriginPos":"0.0",
+			"zToOriginPos":"0.0",
+			"rotation":"0",
+			"text":"none"
+		},
+		"connections":{
+			"finishs": []
+		}
+	},	
+	{
+		"name": "Plane",
+		"versions": {
+			"v1": "https://github.com/Albertojuanse/miso_ar_test/blob/master/Ikea/Ikea/Models.scnassets/Plane.scn?raw=true"
+		},
+		"vname": {
+			"v1": "v1plane"
+		},
+		"showAttributes":[],
+		"constraints":{
+			"planes":"any",
+			"ilumination":"",
+			"sizeMin":"1.0",
+			"sizeMax":"1.0",
+			"sizeInit":"0.0",
+			"overlapping":"true",
+			"xToOriginPos":"0.0",
+			"yToOriginPos":"0.0",
+			"zToOriginPos":"0.0",
+			"rotation":"0",
+			"text":"none"
+		},
+		"connections":{
+			"Planes": []
+		}
+	}] 
+}

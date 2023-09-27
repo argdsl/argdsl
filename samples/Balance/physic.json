@@ -1,0 +1,85 @@
+{
+	"name": "playground",
+	"classes": [	
+	{
+		"name": "Ball",
+		"physicBody":{
+			"bodyType": "dynamic",
+			"mass": 0.6,
+			"charge": 0.0,
+			"friction": 0.5,
+			"rollingFriction": 0.0,
+			"damping": 0.1,
+			"angularDamping": 0.1,
+			"restitution": 0.5
+		},
+		"bitMasks":{
+			"category": 1,
+			"collision": 6,
+			"contactTest": 6
+		},
+		"forces":[		
+		{
+			"name":"push",
+			"message":"",
+			"gesture":"touch",
+			"xVector":0.0,
+			"yVector":0.3,
+			"zVector":3.0
+		},		
+		{
+			"name":"",
+			"message":"",
+			"gesture":"touch",
+			"xVector":0.0,
+			"yVector":0.0,
+			"zVector":0.0
+		}]
+	},	
+	{
+		"name": "Floor",
+		"physicBody":{
+			"bodyType": "static",
+			"mass": 0.0,
+			"charge": 0.0,
+			"friction": 0.5,
+			"rollingFriction": 0.0,
+			"damping": 0.1,
+			"angularDamping": 0.1,
+			"restitution": 0.5
+		},
+		"bitMasks":{
+			"category": 2,
+			"collision": 1,
+			"contactTest": 1
+		},
+		"forces":[		
+		{
+			"name":"",
+			"message":"",
+			"gesture":"tilt",
+			"xVector":0.0,
+			"yVector":0.0,
+			"zVector":0.0
+		}]
+	},	
+	{
+		"name": "Box",
+		"physicBody":{
+			"bodyType": "static",
+			"mass": 0.0,
+			"charge": 0.0,
+			"friction": 0.5,
+			"rollingFriction": 0.0,
+			"damping": 0.1,
+			"angularDamping": 0.1,
+			"restitution": 0.5
+		},
+		"bitMasks":{
+			"category": 4,
+			"collision": 1,
+			"contactTest": 1
+		},
+		"forces":[]
+	}]
+}

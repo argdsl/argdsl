@@ -1,0 +1,39 @@
+{
+	"bluetooth": false,
+	"classes": [
+	{
+		"name": "ball",
+		"abstract": "false",
+		"parents": [],
+		"attributes": [],
+		"reference": []	
+	},
+	{
+		"name": "net",
+		"abstract": "false",
+		"parents": [],
+		"attributes": [],
+		"reference": []	
+	},
+	{
+		"name": "obstacle",
+		"abstract": "false",
+		"parents": [],
+		"attributes": [],
+		"reference": []	
+	},
+	{
+		"name": "floor",
+		"abstract": "false",
+		"parents": [],
+		"attributes": [],
+		"reference": []	
+	}	
+	],
+	"external": false,
+	"firebase": false,
+	"gameloop": true,
+	"name": "football",
+	"onlyCodes": false,
+	"physics": true
+}

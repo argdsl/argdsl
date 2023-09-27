@@ -1,0 +1,110 @@
+{
+	"name": "football",
+	"classes": [	
+	{
+		"name": "ball",
+		"versions": {
+			"v1": ".../ball.scn"
+		},
+		"vname": {
+			"v1": "v1"
+		},
+		"showAttributes":[],
+		"constraints":{
+			"planes":"any",
+			"ilumination":"",
+			"sizeMin":"1.0",
+			"sizeMax":"1.0",
+			"sizeInit":"0.0",
+			"overlapping":"true",
+			"xToOriginPos":"0.0",
+			"yToOriginPos":"0.0",
+			"zToOriginPos":"0.0",
+			"rotation":"0",
+			"text":"none"
+		},
+		"connections":{
+			"balls": []
+		}
+	},	
+	{
+		"name": "net",
+		"versions": {
+			"v1": ".../net.scn"
+		},
+		"vname": {
+			"v1": "v1"
+		},
+		"showAttributes":[],
+		"constraints":{
+			"planes":"horizontal",
+			"ilumination":"",
+			"sizeMin":"1.0",
+			"sizeMax":"1.0",
+			"sizeInit":"0.0",
+			"overlapping":"true",
+			"xToOriginPos":"0.0",
+			"yToOriginPos":"0.0",
+			"zToOriginPos":"0.0",
+			"rotation":"0",
+			"text":"none"
+		},
+		"connections":{
+			"nets": []
+		}
+	},	
+	{
+		"name": "obstacle",
+		"versions": {
+			"v1": ".../obstacle.scn"
+,			"v2": ".../poste.scn"
+		},
+		"vname": {
+			"v1": "v1"
+,			"v2": "v2"
+		},
+		"showAttributes":[],
+		"constraints":{
+			"planes":"any",
+			"ilumination":"",
+			"sizeMin":"1.0",
+			"sizeMax":"1.0",
+			"sizeInit":"0.0",
+			"overlapping":"true",
+			"xToOriginPos":"0.0",
+			"yToOriginPos":"0.0",
+			"zToOriginPos":"0.0",
+			"rotation":"0",
+			"text":"none"
+		},
+		"connections":{
+			"obstacles": []
+		}
+	},	
+	{
+		"name": "floor",
+		"versions": {
+			"v1": ".../floor.scn"
+		},
+		"vname": {
+			"v1": "v1"
+		},
+		"showAttributes":[],
+		"constraints":{
+			"planes":"any",
+			"ilumination":"",
+			"sizeMin":"1.0",
+			"sizeMax":"1.0",
+			"sizeInit":"0.0",
+			"overlapping":"true",
+			"xToOriginPos":"0.0",
+			"yToOriginPos":"0.0",
+			"zToOriginPos":"0.0",
+			"rotation":"0",
+			"text":"none"
+		},
+		"connections":{
+			"floors": []
+		}
+	}] 
+}
