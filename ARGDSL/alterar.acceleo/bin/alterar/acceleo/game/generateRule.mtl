@@ -1,0 +1,43 @@
+[comment encoding = UTF-8 /]
+[module generateRule('http://ardsl/1.0')]
+
+
+[template public generateElement(aCondition : Condition)]
+[if (aCondition.oclIsKindOf(Arithmetic))]
+[let arithmetic : Arithmetic = aCondition.oclAsType(Arithmetic)]
+"left":"[arithmetic.left.generateLeftRightValue()/]",
+"right":"[arithmetic.right.generateLeftRightValue()/]",
+"operation":"[arithmetic.op/]"
+[/let]
+[/if]
+[if (aCondition.oclIsKindOf(LogicOp))]
+[let logic : LogicOp = aCondition.oclAsType(LogicOp)]
+"left":{
+	[logic.left.generateElement()/]
+},
+[if (logic.oclIsKindOf(Binary))]
+[let bin : Binary = logic.oclAsType(Binary)]
+"right":{
+	[bin.right.generateElement()/]
+},
+[/let]
+[/if]
+"operation":"[logic.generateLogicOp()/]"
+[/let]
+[/if]
+[/template]
+
+[template public generateLogicOp(logic : LogicOp)]
+[if (logic.oclIsTypeOf(Not))]
+Not[/if][if (logic.oclIsTypeOf(Binary))][let bin : Binary = logic.oclAsType(Binary)]
+[bin.op/][/let][/if]
+[/template]
+
+[template public generateLeftRightValue(aValue : Value)]
+[if (aValue.oclIsTypeOf(AttributeValue))]
+[let atValue : AttributeValue = aValue.oclAsType(AttributeValue)]
+[atValue.class/].[atValue.attribute/][/let][/if][if (aValue.oclIsTypeOf(ConstantValue))]
+[let conValue : ConstantValue = aValue.oclAsType(ConstantValue)]
+[conValue.value/][/let][/if][if (aValue.oclIsTypeOf(AllInstances))]
+[let allValue : AllInstances = aValue.oclAsType(AllInstances)]AllInstances([allValue.type/])[/let][/if]
+[/template]

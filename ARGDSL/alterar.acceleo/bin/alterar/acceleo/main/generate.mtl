@@ -1,0 +1,58 @@
+[comment encoding = UTF-8 /]
+[module generate('http://ardsl/1.0')]
+[import alterar::acceleo::physic::generate /]
+[import alterar::acceleo::graphic::generate /]
+[import alterar::acceleo::game::generate /]
+
+[template public generateElement(anOntological : Ontological)]
+[comment @main/]
+[file ('ontological.json', false, 'UTF-8')]
+{
+	"bluetooth": false,
+	"classes": [ '[' /][for (class: Class | anOntological.classes) separator(',')]
+
+	{
+		"name": "[class.name /]",
+		"abstract": "[class.abstract /]",
+		"parents": [ '[' /][for (class2: Class | class.superclass)  separator(',')][class2.name /][/for][ ']' /],
+		"attributes": [ '[' /][for (attribute: Attribute | class.attributes) separator(',')]{
+			"name": "[attribute.name /]",
+			"type": "[attribute.type /]",
+			"min": "[attribute.min /]",
+			"max": "[attribute.max /]",
+			"default": "[attribute.default /]",
+			"isParam": [attribute.isParam /],
+			"readOnly": [attribute.readOnly /]
+		}[/for][ ']' /],
+		"reference": [ '[' /][for (reference: Reference | class.references) separator(',')]{
+			"name": "[reference.name /]",
+			"containtment": "[reference.containtment /]",
+			"target": "[reference.target /]",
+			"min": "[reference.min /]",
+			"max": "[reference.max /]",
+			"opposite": "[reference.opposite /]"
+			
+		}[/for][ ']' /][if (class.noSCN)],
+		"noSCN": [class.noSCN /][/if]
+	
+	}[/for]
+	
+	[ ']' /],
+	"external": false,
+	"firebase": false,
+	"gameloop": true,
+	"name": "[anOntological.name /]",
+	"onlyCodes": false,
+	"physics": true
+}
+[/file]
+[let graphic : Graphic = anOntological.graphic]
+	[graphic.generateElement(graphic, anOntological.name) /]
+[/let]
+[let physic : Physic = anOntological.physic]
+	[physic.generateElement(physic, anOntological.name) /]
+[/let]
+[let game : Game = anOntological.game]
+	[game.generateElement(game, anOntological.name) /]
+[/let]
+[/template]
