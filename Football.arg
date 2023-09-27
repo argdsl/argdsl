@@ -1,0 +1,167 @@
+Game football {
+	elements {
+		ball{}
+		net{}
+		obstacle{}
+		floor{}
+	}
+}
+
+Graphic{
+	element ball
+	versions {
+		v1 = ".../ball2.scn"
+	}
+	constraints{
+		plane any
+		overlaps
+		sizeMin 1.0
+		sizeMax 1.0
+		xVariation 0.0
+		yVariation 0.0
+		zVariation 0.0
+		rotation 0
+	}
+	element net
+	versions {
+		v1 = ".../net.scn"
+	}
+	constraints{
+		plane horizontal
+		overlaps
+		sizeMin 1.0
+		sizeMax 1.0
+		xVariation 0.0
+		yVariation 0.0
+		zVariation 0.0
+		rotation 0
+	}
+	element obstacle
+	versions {
+		v1 = ".../obstacle.scn"
+		v2 = ".../poste.scn"
+	}
+	constraints{
+		plane any
+		overlaps
+		sizeMin 1.0
+		sizeMax 1.0
+		xVariation 0.0
+		yVariation 0.0
+		zVariation 0.0
+		rotation 0
+	}
+	element floor
+	versions {
+		v1 = ".../floor.scn"
+	}
+	constraints{
+		plane any
+		overlaps
+		sizeMin 1.0
+		sizeMax 1.0
+		xVariation 0.0
+		yVariation 0.0
+		zVariation 0.0
+		rotation 0
+	}
+}
+Physics{
+	element ball
+	body {
+		mass 0.5
+		bodyType dynamic
+		charge 0.0
+		friction 0.5
+		rollingFriction 0.5
+		restitution 0.5
+		damping 0.1
+		angularDamping 0.1
+	}
+	forces {
+		kick : gesture drag
+	}
+	contacts{
+		collision floor obstacle net
+		contact floor obstacle net
+	}
+	element net
+	body {
+		mass 0.0
+		bodyType static
+		charge 0.0
+		friction 0.0
+		rollingFriction 0.0
+		restitution 0.0
+		damping 0.0
+		angularDamping 0.0
+	}
+	element obstacle
+	body {
+		mass 0.0
+		bodyType static
+		charge 0.0
+		friction 0.0
+		rollingFriction 0.0
+		restitution 0.0
+		damping 0.0
+		angularDamping 0.0
+	}
+	element floor
+	body {
+		mass 0.0
+		bodyType static
+		charge 0.0
+		friction 0.3
+		rollingFriction 0.2
+		restitution 0.5
+		damping 0.0
+		angularDamping 0.0
+	}
+}
+Gamelogic {
+	Display{
+		start START
+		win "You Win"
+		lose TIMEOVER
+		score {
+			start 0
+			finish *
+			lives 1
+		}
+	}
+	Actions {
+		gameover {
+			action win
+			timeEach 60
+		} goal {
+			message GOAL
+			score 1
+			changes {
+				do delete fb
+				do create ball named fb at front
+			}
+		} miss {
+			
+			message MISS
+			changes {
+				do delete fb
+				do create ball named fb at front
+			}
+		}
+	}
+	Collisions {
+		element ball to net -> goal
+		element ball to obstacle -> miss
+	}
+	Elements {
+		fb : ball [0.0, 1.0, 1.0]
+		goalNet : net [0.0, 0.0, 10.0]
+		grass : floor [0.0, 0.0, 0.0]
+		post1: obstacle [5.0, 0.0, 10.0]
+		post2: obstacle [-5.0, 0.0, 10.0]
+		limit: obstacle [0.0, 0.0, 12.0]
+		barrier: obstacle [0.0, 0.0, 5.0]
+	}
+	
+}
