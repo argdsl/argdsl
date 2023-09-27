@@ -1,5 +1,5 @@
 ### Hi there 👋
-This is ## ALTER-GAMING
+This is <b>ALTER-GAMING</b>
 <!--
 **argdsl/argdsl** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
